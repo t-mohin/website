@@ -57,6 +57,8 @@ body {
     <h1><center> All about me </center></h1>
     <h2><center>Things I like </center></h2>
 
+<h2><center>Things I like </center></h2>
+
 <ul>
   <li>Coffee</li>
   <li>Books</li>
@@ -76,6 +78,144 @@ body {
   <li>Tomatoes</li>
   <li>Rollercoasters that swing</li>
 </ul> 
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {box-sizing:border-box}
+body {font-family: Verdana,sans-serif;}
+.mySlides {display:none}
+
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+.dot {
+  height: 13px;
+  width: 13px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+</style>
+</head>
+<body>
+
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <img src="https://38.media.tumblr.com/c469e7b3f1ba602c0534db2e04b2c21f/tumblr_mmsqi4Aq9N1sp9fcho1_500.gif" style="width:100%">
+
+</div>
+
+<div class="mySlides fade">
+  <img src="http://img.medscape.com/thumbnail_library/dt_160310_coffee_cup_800x600.jpg" style="width:100%">
+
+</div>
+
+<div class="mySlides fade">
+  <img src="http://www.penguinteen.com/content/uploads/on-sale-roundup.jpg" style="width:100%">
+  
+</div>
+
+<div class="mySlides fade">
+  <img src="img_mountains_wide.jpg" style="width:100%">
+  
+</div>
+<div class="mySlides fade">
+  <img src="img_mountains_wide.jpg" style="width:100%">
+  
+</div>
+
+<div class="mySlides fade">
+  <img src="img_mountains_wide.jpg" style="width:100%">
+  
+</div>
+<div class="mySlides fade">
+  <img src="img_mountains_wide.jpg" style="width:100%">
+</div>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+</div>
+
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    for (i = 0; i < slides.length; i++) {
+       slides[i].style.display = "none";  
+    }
+    slideIndex++;
+    if (slideIndex> slides.length) {slideIndex = 1}    
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+    setTimeout(showSlides, 2000);
+}
+</script>
+
 </body>
 </html>
 
