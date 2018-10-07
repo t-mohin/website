@@ -1,15 +1,43 @@
 <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
-<title>Alpas</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
-<style>
-body {font-family: "Raleway", Arial, sans-serif}
-.w3-row img {margin-bottom: -6px}
-</style>
 <body>
+<style>
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #b85ee1;
+}
+li {
+    float: left;
+    border-right:1px solid #bbb;
+}
+li:last-child {
+    border-right: none;
+}
+li a {
+    display: block;
+    color: #dcc3bc;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+li a:hover:not(.active) {
+    background-color: #dd9bb9;
+}
+.active {
+    background-color: #c394dc;
+}
+</style>
+</head>
+<body>
+
+<ul>
+  <li><a class="active" href="#home">Home</a></li>
+  <li style="float:right"><a href="#about">Login</a></li>
+</ul>
 <style>
 body {
     background-color: #fbdbcb ;
@@ -18,11 +46,6 @@ body {
 <!-- !PAGE CONTENT! -->
 <div class="w3-content" style="max-width:1500px">
 
-  <!-- Header -->
-  <header class="w3-container w3-xlarge w3-padding-24">
-    <a href="#" class="w3-left w3-button w3-purple">MY ART</a>
-    <a href="#about" class="w3-right w3-button w3-purple">About</a>
-  </header>
 <img src="alpas.jpg"  alt="logo" style="width:50%;"class="center">
   </div>
   
