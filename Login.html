@@ -1,6 +1,47 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <style>
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #b85ee1;
+}
+li {
+    float: left;
+    border-right:1px solid #bbb;
+}
+li:last-child {
+    border-right: none;
+}
+li a {
+    display: block;
+    color: #dcc3bc;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+li a:hover:not(.active) {
+    background-color: #dd9bb9;
+}
+.active {
+    background-color: #c394dc;
+}
+</style>
+</head>
+<body>
+
+<ul>
+  <li><a class="active" href="https://tmohinuddin.github.io/tmohinuddin/Home.html">Home</a></li> 
+  <li style="float:right"><a href="https://tmohinuddin.github.io/tmohinuddin/Login.html">Login</a></li>
+</ul>
+<style>
+body {
+    background-color: #fbdbcb ;
+}
+</style>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 body {font-family: Arial, Helvetica, sans-serif;}
