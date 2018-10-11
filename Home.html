@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+<html>
 <body>
 <style>
 ul {
@@ -35,7 +36,9 @@ li a:hover:not(.active) {
 
 <ul>
   <li><a class="active" href="#home">Home</a></li>
+  <li style="float:right"><a href="#about">About Me</a></li>
   <li style="float:right"><a href="#about">Login</a></li>
+  
 </ul>
 <style>
 body {
@@ -55,9 +58,10 @@ img {
 <div class="mySlides fade">
   
   <img src="Alpas.jpg" style="width:65%;"class="center">
-</div>
-<div class="mySlides fade">
+  </div>
 
+<div class="mySlides fade">
+  
   <img src="2.jpg" style="width:100%">
  
 </div>
@@ -80,9 +84,16 @@ img {
 </div>
 <br>
 
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+</div>
+
 <script>
 var slideIndex = 0;
 showSlides();
+
 function showSlides() {
     var i;
     var slides = document.getElementsByClassName("mySlides");
