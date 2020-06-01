@@ -20,14 +20,12 @@ li a {
      padding: 15px 16px;
      text-decoration: none;
      font-size: 120%;}
-li a:hover {
-     background-color: #EOFFFF;}
 .btn-group button {
     background-color: #E2C5D7; /* Green background */
     color: #ffffff; /* White text */
     padding: 20px 100px; /* Some padding */
     cursor: pointer;
-    font-size: 150%;/* Pointer/hand icon */
+    font-size: 50%;/* Pointer/hand icon */
     text-align:center;
     button-align:center;
     float: center; /* Float the buttons side by side */
@@ -44,24 +42,25 @@ li a:hover {
    
 .background color {
     background-color: #7f9c96;
- .mySlides {display:none;}
     
  img {
     max-width: 100%;
     height: auto;
     width: auto\9; /* ie8 */
+    display: block;
+    margin-left: auto;
+    margin-right: auto }
 }
+    
 </style>
    <ul>
     
        <li><a class="active" href="https://t-mohin.github.io/website/Website.html">Home</a></li> 
               <li style="float:left"><a class="active"href="https://t-mohin.github.io/website/Product-Line.html">Product Line</a></li>
       <li style="float:right"><a class="active"href="https://t-mohin.github.io/website/About.html">About</a></li>
-
            
   </ul>
-</head>
-    
+</head>  
 <body>
      <html>
 <body background="MadeByAWoman.jpg";>
@@ -70,22 +69,7 @@ li a:hover {
   <img class="mySlides" src="1.jpg" style="50%;"border="0">
 </div>
     
-<script>
-var myIndex = 0;
-carousel();
-function carousel() {
-    var i;
-    var x = document.getElementsByClassName("mySlides");
-    for (i = 0; i < x.length; i++) {
-       x[i].style.display = "none";  
-    }
-    myIndex++;
-    if (myIndex > x.length) {myIndex = 1}    
-    x[myIndex-1].style.display = "block";  
-    setTimeout(carousel, 7000); // Change image every 2 seconds
-}
-</script>
-    
+   
 <br>
     <form action="https://t-mohin.github.io/website/mission.html">
 <div class="btn-group">
@@ -93,9 +77,6 @@ function carousel() {
     <button>Mission Statement</button> 
     </form>
 </div>
-</div>
-
-    
-    
+</div>    
 </body>
 </html>
