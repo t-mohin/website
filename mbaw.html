@@ -6,9 +6,28 @@
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <style>
 body {font-family: "Times New Roman", Georgia, Serif;}
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6, #myBtn, ul {
   font-family: "Playfair Display";
   letter-spacing: 5px;
+}
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 10px;
+  border: none;
+  outline: none;
+  background-color: darksalmon;
+  color: white;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+#myBtn:hover {
+  background-color: #555;
 }
 </style>
 <body>
@@ -20,7 +39,9 @@ h1, h2, h3, h4, h5, h6 {
     <!-- Right-sided navbar links. Hide them on small screens -->
     <div class="w3-right w3-hide-small">
       <a href="#about" class="w3-bar-item w3-button">About</a>
-      <a class="w3-bar-item w3-button"  href="https://t-mohin.github.io/website/Products.html" >Products</a>
+       <a href="#gallery" class="w3-bar-item w3-button">Gallery</a>
+          <a href="#quotes" class="w3-bar-item w3-button">Quotes</a>
+    <a class="w3-bar-item w3-button"  href="https://t-mohin.github.io/website/Products.html" >Products</a>
       <a href="#gallery" class="w3-bar-item w3-button">Gallery</a>
       <a  href="http://google.com/" class="w3-bar-item w3-button">Exit</a>
     </div>
@@ -47,10 +68,10 @@ h1, h2, h3, h4, h5, h6 {
     <div class="w3-col m6 w3-padding-large">
       <h1 class="w3-center">Mission Statement</h1><br>
       <h5 class="w3-center">For every push back, here is a little push forward</h5>
-      <p class="w3-xlarge">In a world, where being a women equals to being weaker, Made By A Woman aims to showcase the products designed and produced by women. The goal is to have all women regardless of age, race, and religion to understand that they are extraordinary even when society is telling them that they are not.    
+      <p class="w3-xlarge">In a world, where being a women equals to being weaker, Made By A Woman aims to showcase the products designed and produced by women. The goal is to have all women regardless of age, race, and religion to understand that they are extraordinary even when society is telling them that they are not.  </p>  
   </div>
   
-  <div class="w3-row w3-padding-64" id="gallery" style="margin-bottom:128px">
+  <div class="w3-row w3-padding-4" id="gallery">
    <h1 class="w3-center">Gallery</h1><br>
   <div class="w3-third">
    
@@ -58,8 +79,7 @@ h1, h2, h3, h4, h5, h6 {
    <img src="https://i.pinimg.com/originals/4f/00/57/4f0057c3767ca546c5a996361756e4d5.jpg" style="width:100%">
        <img src="https://miro.medium.com/max/800/1*AsVmb-A4gB9DExjIc7e-oQ.jpeg" style="width:100%">
       <img src="https://i.pinimg.com/originals/77/65/9c/77659c31ce770890b14ec32fe424195e.jpg" style="width:100%">
-     <img src="" style="width:100%">
-    
+<img scr="https://66.media.tumblr.com/937cf869d2f3f08b4360699438e2b2a9/tumblr_peup03mgrl1xuaeq7o8_250.png" style="width:100%">
   </div>
  
  <div class="w3-third">
@@ -80,8 +100,47 @@ h1, h2, h3, h4, h5, h6 {
     
      <img src="https://www.ccpl.org/sites/default/files/Events%20Photos/image2%20purple%20mix%20glare%20grad.png" style="width:100%">
           <img src="https://66.media.tumblr.com/6b7dfc1f6bcbd48e27e1e3718c9ab49e/9408b7dd76c77366-0d/s640x960/1b9bdf6ef44b1fd089e170f7c3ee7a209b7dd414.jpg" style="width:100%">
-  </div>
+  </div><br>
+  <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+  <div class="w3-row" id="quotes">
+      <h1 class="w3-center">Quotes</h1>
+
+<ul>
+  <li>“Above all, be the heroine of your life, not the victim.”</li>
+  <li>“I was not a pet, not a doll, not an animal.I was a survivor, and I was strong.I would not be weak, or helpless again.I would not, could not be broken. Tamed.” </li>
+  <li>“Nothing I accept about myself can be used against me to diminish me.” </li>
+  <li>Some women get erased a little at a time, some all at once. Some reappear. Every woman who appears wrestles with the forces that would have her disappear. She struggles with the forces that would tell her story for her, or write her out of the story, the genealogy, the rights of man, the rule of law. The ability to tell your own story, in words or images, is already a victory, already a revolt.” </li>
+  <li>“I am not free while any woman is unfree, even when her shackles are very different from my own.</li>
+  
+  <li>“My mother told me to be a lady. And for her, that meant be your own person, be independent.” </li>
+  <li>“Fill your life with women that empower you, that help you believe in your magic and aid them to believe in their own exceptional power and their incredible magic too. Women that believe in each other can survive anything. Women who believe in each other create armies that will win kingdoms and wars.”</li>
+  <li>“I am no bird; and no net ensnares me; I am a free human being with an independent will, which I now exert to leave you.” </li>
+  <li>“She was the heir of ash and fire, and she would bow to no one.”</li>
+</ul> 
 <!-- End page content -->
 
 </body>
+<script>
+//Get the button
+var mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
+
 </html>
