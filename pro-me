@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<style>
+body,h1 {font-family: "Raleway", sans-serif}
+body, html {height: 100%}
+.bgimg {
+  background-image: url('https://static1.squarespace.com/static/5b4555177e3c3a3d7a637537/5b48209b575d1f05994c5180/5c469355032be40b01353a4a/1548850494754/Feb+Awakening+the+Sacred+Womb+Insata+post.jpg?format=1500w');
+  min-height: 100%;
+  background-position: center ;
+  background-size: cover;
+}
+<!DOCTYPE html>
+<html>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+body {font-family: "Times New Roman", Georgia, Serif;}
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Playfair Display";
+  letter-spacing: 5px;
+}
+</style>
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar w3-darkgreen w3-padding w3-card" style="letter-spacing:4px;">
+    <a href="#home" class="w3-bar-item w3-button">#Pro-Me</a>
+    <!-- Right-sided navbar links. Hide them on small screens -->
+    <div class="w3-right w3-hide-small">
+      <a href="#about" class="w3-bar-item w3-button">About</a>
+      <a href="#laws" class="w3-bar-item w3-button">Laws</a>
+       <a href="#relligon" class="w3-bar-item w3-button">Religion</a>
+        <a href="#contact" class="w3-bar-item w3-button">Help</a>
+      <a href=url("http://google.com") class="w3-bar-item w3-button">Exit</a>
+    </div>
+  </div>
+</div>
+</style>
+<body>
+
+<div class="bgimg w3-display-container w3-animate-opacity w3-text-white">
+  <div class="w3-display-middle">
+    <h1 class="w3-jumbo w3-animate-top">COMING SOON</h1>
+    <hr class="w3-border-green" style="margin:auto;width:40%">
+    <p class="w3-large w3-center">35 days left</p>
+  </div>
+  
+  </div>
+</div>
+
+</body>
+</html>
