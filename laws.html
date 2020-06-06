@@ -5,6 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 <head>
   <link rel="icon" href="https://miro.medium.com/max/864/1*C9YGgBdTizn4sQ_nBjHPGg.png" type="image/gif" sizes="16x16">
 </head>
@@ -17,27 +19,35 @@ h1, h2, h3, h4, h5, h6 {
 
 </style>
 
-<body>
 
-<!-- Navbar (sit on top) -->
+<!-- Navbar -->
 <div class="w3-top">
-  <div class="w3-bar w3-white w3-padding w3-card" style="letter-spacing:4px;">
+  <div class="w3-bar w3-darkgreen w3-card">
+    <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+   <div class="w3-bar w3-white w3-padding w3-card" style="letter-spacing:4px;">
     <a href="https://t-mohin.github.io/website/pro-me.html" class="w3-bar-item w3-button">#Pro-Me</a>
     
-    <div class="w3-right ">
+    <div class="w3-right w3-hide-small ">
       <a href="https://t-mohin.github.io/website/about.html" class="w3-bar-item w3-button">About</a>
       <a href="https://t-mohin.github.io/website/laws.html#laws" class="w3-bar-item w3-button">Laws</a>
        <a href="https://t-mohin.github.io/website/global.html" class="w3-bar-item w3-button">Global</a>
         <a href="https://t-mohin.github.io/website/help.html" class="w3-bar-item w3-button">Help</a>
         <a href="https://t-mohin.github.io/website/gallery.html" class="w3-bar-item w3-button">Gallery</a>
+              <a href="http://google.com" class="w3-bar-item w3-button">Exit</a>
 
-      <a href="http://google.com" class="w3-bar-item w3-button">Exit</a>
-    </div>
-  
-   
-</style>
-<body>
-<!-- Header -->
+</div>
+      
+
+<!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
+<div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
+    <a href="https://t-mohin.github.io/website/about.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">About</a>
+      <a href="https://t-mohin.github.io/website/laws.html#laws" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Laws</a>
+       <a href="https://t-mohin.github.io/website/global.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Global</a>
+        <a href="https://t-mohin.github.io/website/gallery.html" class="w3-bar-item w3-button  w3-padding-large" onclick="myFunction()"> Help</a>
+              <a href="http://google.com" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Exit</a>
+
+  </div>
+<!-- Image of location/map -->
 <header class="w3-display-container w3-content w3-wide" style="max-width:1600px;min-width:500px" id="home">
   <img class="w3-image" src="https://mail.google.com/mail/u/1?ui=2&ik=1ea4c99621&attid=0.4&permmsgid=msg-a:r-1964392731261357630&th=16cbfe5998858f1c&view=fimg&realattid=f_jzohsbjl7&disp=thd&attbid=ANGjdJ-DOpK9B-qfIK1dDD644UpUx4tW_Jv7FiS6UR8_ItLvL8hYuJXXbHe5dl5uTmtN_Oh1GJmwKJD6Q5i4hZJjAnE3pJpqHaSA6KkW5WycKoiTYO-Q-O7TkVkP2DU&ats=2524608000000&sz=w1366-h625"  width="1600" height="50">
   <div class="w3-display-bottomleft w3-padding-large w3-opacity">
@@ -79,16 +89,22 @@ h1, h2, h3, h4, h5, h6 {
   </div>
   
   <hr>
-
-  
-<!-- End page content -->
-</div>
-
 <!-- Footer -->
-<footer class="w3-center w3-light-grey w3-padding-32">  <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a>
-</footer>
 
+
+<script>
+
+// Used to toggle the menu on small screens when clicking on the menu button
+function myFunction() {
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+
+</script>
 
 </body>
-  
 </html>
