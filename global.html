@@ -1,19 +1,41 @@
 <!DOCTYPE html>
-
 <html>
-<title>Global</title>
+<head>
+  <link rel="icon" href="https://miro.medium.com/max/864/1*C9YGgBdTizn4sQ_nBjHPGg.png" type="image/gif" sizes="16x16">
+</head>
+</head>
+<title>Laws</title>
 <meta charset="UTF-8">https://www.w3schools.com/w3images/hamburger.jpg
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-<head>
-  <link rel="icon" href="https://miro.medium.com/max/864/1*C9YGgBdTizn4sQ_nBjHPGg.png" type="image/gif" sizes="16x16">
-</head>
+
 <style>
 body {font-family: "Times New Roman", Georgia, Serif;}
 h1, h2, h3, h4, h5, h6 {
   font-family: "Playfair Display";
   letter-spacing: 5px;
+}
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 15px;
+  border: none;
+  outline: none;
+  background-color: pink;
+  color: white;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+#myBtn:hover {
+  background-color: #E6E6FA;
+    color: black;
+
 }
 img {
   display: block;
@@ -52,8 +74,30 @@ img {
   <img class="w3-image" src="001.jpg" class="center" width="700" height="600">
   </div>
   
-
-  </div>
+     <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
  
+
+<!-- Footer -->
 </body>
+<script>
+//Get the button
+var mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
 </html>
