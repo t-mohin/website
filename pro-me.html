@@ -14,50 +14,68 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Playfair Display";
   letter-spacing: 15px;
 }
-body, html {height: 100%}
-.bgimg {
-  background-image: url('https://img5.goodfon.com/wallpaper/nbig/f/bf/lilac-flowers-purple-wood-fon-tsvety-siren.jpg');
-  min-height: 95.2%;
-   background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
+body {
+  background-color: #eedddb;
 }
-
-
+.w3-row-padding img {margin-bottom: 12px}
+/* Set the width of the sidebar to 120px */
+.w3-sidebar {width: 120px;background: #eedddb;}
+/* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
+#main {margin-left: 120px}
+/* Remove margins from "page content" on small screens */
+@media only screen and (max-width: 600px) {#main {margin-left: 0}}
 </style>
 
-<body>
+<!-- Icon Bar (Sidebar - hidden on small screens) -->
+<nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
+  <!-- Avatar image in top left corner -->
+  <a href="https://t-mohin.github.io/website/pro-me.html" class="w3-bar-item w3-button w3-padding-large w3-hover-white">
+    <p>#PRO-ME</p>
+  </a>
+  <a href="https://t-mohin.github.io/website/about.html#about" class="w3-bar-item w3-button w3-padding-large w3-hover-white">
+    <p>About</p>
+  </a>
+  <a href="https://t-mohin.github.io/website/laws.html#laws" class="w3-bar-item w3-button w3-padding-large w3-hover-white">
+    <p>Laws</p>
+  </a>
+  <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hover-white">
+    <p>Help</p>
+  </a>
+    <a href="https://t-mohin.github.io/website/global.html" class="w3-bar-item w3-button w3-padding-large w3-hover-white">
+    <p>Global</p>
+  </a>
+  <a href="https://t-mohin.github.io/website/gallery.html" class="w3-bar-item w3-button w3-padding-large w3-hover-white">
+    <p>Gallery</p>
+  </a>
+  
 
-<!-- Navbar (sit on top) -->
-<div class="w3-top">
-  <div class="w3-bar w3-purple w3-padding w3-card" style="letter-spacing:4px;">
-    <a href="https://t-mohin.github.io/website/pro-me.html" class="w3-bar-item w3-button w3-text-white">#Pro-Me</a>
-    
-    <!-- Right-sided navbar links. Hide them on small screens -->
-    <div class="w3-right">
-      <a href="https://t-mohin.github.io/website/about.html#about" class="w3-bar-item w3-button w3-text-v">About</a>
-      <a href="https://t-mohin.github.io/website/laws.html#laws" class="w3-bar-item w3-button w3-text-white">Laws</a>
-       <a href="https://t-mohin.github.io/website/global.html" class="w3-bar-item w3-button w3-text-white">Global</a>
-        <a href="https://t-mohin.github.io/website/help.html#help" class="w3-bar-item w3-button w3-text-white">Help</a>
-        <a href="https://t-mohin.github.io/website/gallery.html" class="w3-bar-item w3-button w3-text-white">Gallery</a>
+</nav>
 
-      <a href="http://google.com" class="w3-bar-item w3-button w3-text-white">Exit</a>
-    </div>
+<!-- Navbar on small screens (Hidden on medium and large screens) -->
+<div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
+  <div class="w3-bar w3-center w3-small">
+    <a href="https://t-mohin.github.io/website/pro-me.html" class="w3-bar-item w3-button" style="width:25% !important">#PRO-ME</a>
+    <a href="https://t-mohin.github.io/website/pro-me.html#about" class="w3-bar-item w3-button" style="width:25% !important">ABOUT</a>
+    <a href="https://t-mohin.github.io/website/laws.html#laws" class="w3-bar-item w3-button" style="width:25% !important">LAWS</a>
+    <a href="https://t-mohin.github.io/website/global.html" class="w3-bar-item w3-button" style="width:25% !important">GLOBAL</a>
+      <a href="https://t-mohin.github.io/website/help.html#help" class="w3-bar-item w3-button" style="width:25% !important">HELP</a>
+    <a href="https://t-mohin.github.io/website/gallery.html" class="w3-bar-item w3-button" style="width:25% !important">GALLERY</a>
+   
   </div>
 </div>
-</style>
-<body>
 
- <br><div class="bgimg w3-display-container w3-animate-opacity w3-text-black" "w3-center">
-  <div class="w3-display-middle">
-  <h3 class="w3-jumbo w3-animate-top w3-center">#Pro-Me</h3>
-       <p class="w3-center" "w3-large"><i>No one has a right to your body</i></p1>
-   <hr class="w3-border-purple" style="margin:auto;width:40%">
-    <p class="w3-large w3-center">A digital campaign focusing on the empowerment of women rather than the decision she makes regarding her body/womb.
-</p>
-  </div>
-  
-  </div>
+<!-- Page Content -->
+<div class="w3-padding-large" id="main">
+  <!-- Header/Home -->
+  <header class="w3-container w3-padding-32 w3-center" id="home">
+    <h2 class="w3-jumbo">Pro-Me</h2>
+    <p><i>No one has a right over your body</i></p>
+    <img src="https://i.pinimg.com/564x/1b/0f/65/1b0f6523c7747a0f928ffdc5f4336199.jpg"  class="w3-image" width="100%">
+
+        <p>A digital campaign focusing on the empowerment of women rather than the decision she makes regarding her body/womb.</p>
+
+
+<!-- END PAGE CONTENT -->
 </div>
 
 </body>
