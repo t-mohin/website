@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html>
-<head> <link rel="icon" href="https://image.flaticon.com/icons/svg/3024/3024946.svg"
+<head> <link rel="icon" href="https://i.pinimg.com/564x/4b/18/b7/4b18b79c4fd8caab1302f349f974a855.jpg"
 type="image/gif" sizes="16x16">
 </head>
   <title>Made By A Women</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+  
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -38,23 +41,48 @@ h1, h2, h3, h4, h5, h6, #myBtn, ul {
 <!-- Navbar (sit on top) -->
 <div class="w3-top">
   <div class="w3-bar w3-white w3-padding w3-card" style="letter-spacing:4px;">
-    <a href="https://t-mohin.github.io/website/mbaw.html#home" class="w3-bar-item w3-button">Made By A Women</a>
+    <a href="https://t-mohin.github.io/website/mbaw.html#home" class="w3-bar-item w3-button">Made By A Woman</a>
+
     <!-- Right-sided navbar links. Hide them on small screens -->
-    <div class="w3-right">
+    <div class="w3-right w3-hide-small">
       <a href="#about" class="w3-bar-item w3-button">About</a>
-       <a href="#gallery" class="w3-bar-item w3-button">Gallery</a>
-          <a href="#quotes" class="w3-bar-item w3-button">Quotes</a>
-    <a class="w3-bar-item w3-button"  href="https://t-mohin.github.io/website/Products.html" >Products</a>
-      <a  href="http://google.com/" class="w3-bar-item w3-button">Exit</a>
+      <a href="#gallery" class="w3-bar-item w3-button">Gallery</a>
+      <a href="#quotes" class="w3-bar-item w3-button">Quotes</a>
+      <a class="w3-bar-item w3-button" href="https://t-mohin.github.io/website/Products.html">Products</a>
+      <a href="http://google.com/" class="w3-bar-item w3-button">Exit</a>
     </div>
+
+    <!-- Hamburger icon for small screens -->
+    <a href="javascript:void(0);" class="w3-bar-item w3-button w3-hide-large w3-hide-medium" onclick="toggleNav()">
+      <i class="fa fa-bars"></i>
+    </a>
   </div>
 </div>
 
+<!-- Hidden Navbar for Small Screens -->
+<div id="smallNav" class="w3-bar-block w3-hide w3-hide-large w3-hide-medium" style="position: absolute; top: 60px; width: 100%; background-color: white; z-index: 1;">
+  <a href="#about" class="w3-bar-item w3-button" onclick="toggleNav()">About</a>
+  <a href="#gallery" class="w3-bar-item w3-button" onclick="toggleNav()">Gallery</a>
+  <a href="#quotes" class="w3-bar-item w3-button" onclick="toggleNav()">Quotes</a>
+  <a href="https://t-mohin.github.io/website/Products.html" class="w3-bar-item w3-button" onclick="toggleNav()">Products</a>
+  <a href="http://google.com/" class="w3-bar-item w3-button" onclick="toggleNav()">Exit</a>
+</div>
+
+<script>
+  // Function to toggle the navigation on small screens
+  function toggleNav() {
+    var x = document.getElementById("smallNav");
+    if (x.className.indexOf("w3-show") === -1) {
+      x.className += " w3-show";
+    } else {
+      x.className = x.className.replace(" w3-show", "");
+    }
+  }
+</script>
+
 <!-- Header -->
 <header class="w3-display-container w3-content w3-wide" style="max-width:1600px;min-width:500px" id="home">
-  <img class="w3-image" src="https://cdn.everydaypower.com/wp-content/uploads/2015/02/35-Inspirational-Women-Empowerment-Quotes.jpg" alt="cdn" width="1600" height="800">
   <div class="w3-display-bottomleft w3-padding-large w3-opacity">
-    <h1 class="w3-xxlarge">By Women For Women</h1>
   </div>
 </header>
 
@@ -63,14 +91,21 @@ h1, h2, h3, h4, h5, h6, #myBtn, ul {
 
   <!-- About Section -->
   <div class="w3-row w3-padding-64" id="about">
-    <div class="w3-col m6 w3-padding-large w3-hide-small">
+      <h1 class="w3-center w3-italic">By Women For Women</h1>
+    <div class="w3-col m6 w3-padding-large"><br>
+
      <img src="https://image.freepik.com/free-vector/women-s-day-pattern-with-diverse-women-faces_23-2148413612.jpg" class="w3-round w3-image w3-opacity-min" alt="Freepik" width="600" height="600">
     </div>
 
     <div class="w3-col m6 w3-padding-large">
-      <h1 class="w3-center">Mission Statement</h1><br>
+      <h2 class="w3-center">Mission Statement</h1>
       <h5 class="w3-center">For every push back, here is a little push forward</h5>
-      <p class="w3-large">In a world, where being a women equals to being weaker, Made By A Woman aims to showcase the products designed and produced by women. The goal is to have all women regardless of age, race, and religion to understand that they are extraordinary even when society is telling them that they are not.  </p>  
+      <p class="w3-medium"> In a world where being a woman is often mistakenly equated with being weaker, Made By A Woman strives to challenge and break these outdated and harmful stereotypes. Our mission is to celebrate and amplify the voices, creativity, and talents of women everywhere by showcasing products that are designed and produced by women.</p>
+      
+ <p class="w3-medium">Our goal is not only to highlight the work of women but to empower them—of all ages, races, religions, and backgrounds. We want every woman to recognize her own worth and potential, no matter how society may try to diminish it. Whether it’s in the arts, technology, business, or everyday life, women are shaping the future.</p>
+ <p class="w3-medium">By celebrating female-driven creations, we hope to foster a global community where women can come together, support each other, and thrive. Our vision is to create a world where women not only feel valued but are also encouraged to keep pushing boundaries, breaking barriers, and redefining what is possible.</p>
+
+ </p>  
   </div>
   
   <div class="w3-row w3-padding-4">
@@ -80,8 +115,7 @@ h1, h2, h3, h4, h5, h6, #myBtn, ul {
     <img src="https://miro.medium.com/max/500/0*HfYcvMyzYRVyUHbU.jpg" style="width:100%">
    <img src="https://i.pinimg.com/originals/4f/00/57/4f0057c3767ca546c5a996361756e4d5.jpg" style="width:100%">
        <img src="https://miro.medium.com/max/800/1*AsVmb-A4gB9DExjIc7e-oQ.jpeg" style="width:100%">
-      <img src="https://i.pinimg.com/originals/77/65/9c/77659c31ce770890b14ec32fe424195e.jpg" style="width:100%">
-<img scr="https://66.media.tumblr.com/937cf869d2f3f08b4360699438e2b2a9/tumblr_peup03mgrl1xuaeq7o8_250.png" style="width:100%">
+      <img src="https://i.pinimg.com/originals/77/65/9c/77659c31ce770890b14ec32fe424195e.jpg" style="width:100%;height:600px;">
   </div>
  
  <div class="w3-third">
@@ -89,9 +123,8 @@ h1, h2, h3, h4, h5, h6, #myBtn, ul {
     <img src="https://i.pinimg.com/originals/40/2b/02/402b0264d3ddbc791b7f9b81251f6d2d.jpg" style="width:100%">
     <img src="https://cdn1.expresscomputer.in/wp-content/uploads/2020/02/12150037/women-startups.png" style="width:100%">
      <img src="https://i.pinimg.com/originals/48/85/46/48854657c7b12af357b04a9cc4f35754.png" style="width:100%">
-          <img src="" style="width:100%">
-     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQQyAJsOtgMrDOebbx65eVmJa1cm1dnHNNgQUju-gWn6A0yk_SI&usqp=CAU" style="width:100%">
-
+          <img src="         https://i.pinimg.com/564x/02/1e/66/021e66ab7824486bd363209050d370ab.jpg" style="width:100%">
+     <img src="https://sph.emory.edu/news/_includes/images/sections/news-releases/2021/features/2022-Womens-Empowerment-Leader.jpg" style="width:100%">
    
   </div> 
   
@@ -101,8 +134,9 @@ h1, h2, h3, h4, h5, h6, #myBtn, ul {
      <img src="https://66.media.tumblr.com/61f2d966e9491c5b90960983af494d84/tumblr_pry9zm9CcW1vvme2xo1_400.png" style="width:100%">
     
      <img src="https://www.ccpl.org/sites/default/files/Events%20Photos/image2%20purple%20mix%20glare%20grad.png" style="width:100%">
-          <img src="https://66.media.tumblr.com/6b7dfc1f6bcbd48e27e1e3718c9ab49e/9408b7dd76c77366-0d/s640x960/1b9bdf6ef44b1fd089e170f7c3ee7a209b7dd414.jpg" style="width:100%">
+          <img src="https://66.media.tumblr.com/6b7dfc1f6bcbd48e27e1e3718c9ab49e/9408b7dd76c77366-0d/s640x960/1b9bdf6ef44b1fd089e170f7c3ee7a209b7dd414.jpg" style="width:100%; height:330px;">
   </div><br>
+  
   <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
   </div><br>
 
