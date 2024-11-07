@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html>
- <head> <link rel="icon" href="https://image.flaticon.com/icons/svg/3024/3024946.svg"
+ <head> <link rel="icon" href="https://i.pinimg.com/564x/4b/18/b7/4b18b79c4fd8caab1302f349f974a855.jpg"
 type="image/gif" sizes="16x16">
 </head>
 <title>Products</title>
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -43,20 +45,48 @@ a:hover {
 </style>
 <body>
 
-<!-- Navbar (sit on top) -->
+<<!-- Navbar (sit on top) -->
 <div class="w3-top">
   <div class="w3-bar w3-white w3-padding w3-card" style="letter-spacing:4px;">
-    <a href="https://t-mohin.github.io/website/mbaw.html#home" class="w3-bar-item w3-button">Made By A Women</a>
+    <a href="https://t-mohin.github.io/website/mbaw.html#home" class="w3-bar-item w3-button">Made By A Woman</a>
+
     <!-- Right-sided navbar links. Hide them on small screens -->
-    <div class="w3-right ">
-      <a href="https://t-mohin.github.io/website/mbaw.html" class="w3-bar-item w3-button">About</a>
-            <a href="https://t-mohin.github.io/website/mbaw.html#gallery" class="w3-bar-item w3-button">Gallery</a>
-                  <a href="https://t-mohin.github.io/website/mbaw.html#quotes" class="w3-bar-item w3-button">Quotes</a>
-      <a class="w3-bar-item w3-button"  href="https://t-mohin.github.io/website/Products.html" >Products</a>
-      <a  href="http://google.com/" class="w3-bar-item w3-button">Exit</a>
+    <div class="w3-right w3-hide-small">
+      <a href="#about" class="w3-bar-item w3-button">About</a>
+      <a href="#gallery" class="w3-bar-item w3-button">Gallery</a>
+      <a href="#quotes" class="w3-bar-item w3-button">Quotes</a>
+      <a class="w3-bar-item w3-button" href="https://t-mohin.github.io/website/Products.html">Products</a>
+      <a href="http://google.com/" class="w3-bar-item w3-button">Exit</a>
     </div>
+
+    <!-- Hamburger icon for small screens -->
+    <a href="javascript:void(0);" class="w3-bar-item w3-button w3-hide-large w3-hide-medium" onclick="toggleNav()">
+      <i class="fa fa-bars"></i>
+    </a>
   </div>
 </div>
+
+<!-- Hidden Navbar for Small Screens -->
+<div id="smallNav" class="w3-bar-block w3-hide w3-hide-large w3-hide-medium" style="position: absolute; top: 60px; width: 100%; background-color: white; z-index: 1;">
+  <a href="#about" class="w3-bar-item w3-button" onclick="toggleNav()">About</a>
+  <a href="#gallery" class="w3-bar-item w3-button" onclick="toggleNav()">Gallery</a>
+  <a href="#quotes" class="w3-bar-item w3-button" onclick="toggleNav()">Quotes</a>
+  <a href="https://t-mohin.github.io/website/Products.html" class="w3-bar-item w3-button" onclick="toggleNav()">Products</a>
+  <a href="http://google.com/" class="w3-bar-item w3-button" onclick="toggleNav()">Exit</a>
+</div>
+
+<script>
+  // Function to toggle the navigation on small screens
+  function toggleNav() {
+    var x = document.getElementById("smallNav");
+    if (x.className.indexOf("w3-show") === -1) {
+      x.className += " w3-show";
+    } else {
+      x.className = x.className.replace(" w3-show", "");
+    }
+  }
+</script>
+
 
 <!-- Header -->
 <header class="w3-display-container w3-content w3-wide" style="max-width:1600px;min-width:500px" id="home">
@@ -86,13 +116,13 @@ a:hover {
 </p>
       </div>
     <div class="w3-quarter">
-      <img src="https://www.bbb.org/ProfileImages/e6a233a0-5f8c-457e-950d-5250c7eaf6ed.png" alt="True & Co" style="width:100%">
+      <img src="https://scontent-lga3-1.xx.fbcdn.net/v/t39.30808-6/359483812_668528351983304_1177886961647633414_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=f6q9IQQyxhYQ7kNvgFp-pWX&_nc_zt=23&_nc_ht=scontent-lga3-1.xx&_nc_gid=A-_g_iePZ8N7p3wuKQWcpDC&oh=00_AYBUAhZNZBS70GnTSTquwHq8qX-3XmT8wA2rmBJ5nXh1TA&oe=6731F009" alt="True & Co" style="width:100%">
       <h3>True & Co</h3>
        <a href="https://trueandco.com/" target="_blank">Website</a>
       <p>True & Co is an online lingerie  shop that is built to create products that allow for every woman, to feel comfortable in their own skin. </p>
     </div>
     <div class="w3-quarter">
-      <img src="https://res-1.cloudinary.com/crunchbase-production/image/upload/c_lpad,f_auto,q_auto:eco/v1410245059/socvsv1xog7cnw3iiwwo.png" alt="Brit + Co" style="width:100%">
+      <img src="https://do.ithistory.org/sites/default/files/company/logo/Brit%20%2B%20Co.jpg" alt="Brit + Co" style="width:100%">
       <h3>Brit + Co </h3>
     <a href="https://www.brit.co/" target="_blank">Website</a> 
      <p>Brit+Co is a media company that inspires, educates and entertains women with a creative spirit while inspiring and enabling women to make. </p>
@@ -115,7 +145,7 @@ a:hover {
       <p>Beauty Redefined is a nonprofit orgization that focuses on body image resilience via online and live events</p>
     </div>
     <div class="w3-quarter">
-      <img src="https://pbs.twimg.com/profile_images/654360418354200576/SNfv41Xc_400x400.png" alt="Global Fund For Women" style="width:100%">
+      <img src="https://pbs.twimg.com/profile_images/1602813164143316992/91viDKNd_400x400.png" alt="Global Fund For Women" style="width:100%">
       <h3>Global Fund For Women</h3>        <a href="" target="_blank">Website</a>
 
       <p>The Global Fund for Women is one of the world’s leading foundations for gender equality, standing up for the human rights of women and girls. They campaign for freedom from violence, economic justice, and sexual and reproductive health and rights.</p>
@@ -145,7 +175,7 @@ a:hover {
       <p>Thinx was created by Antonia Dunbar, Miki Agrawal, Radha Agrawal created their signature product, panties that absorb  menstrual blood and are chlorine-bleached.</p>
     </div>
     <div class="w3-quarter">
-      <img src="https://www.bbb.org/ProfileImages/a51a8a11-7363-4821-96a7-debe33d39043.png" alt="BellaBeat" style="width:100%">
+      <img src="https://i.pinimg.com/564x/76/38/81/7638819e19ffac664c47c9703bd189fa.jpg" alt="BellaBeat" style="width:100%">
       <h3>BellaBeat</h3>            <a href="https://bellabeat.com/" target="_blank">Website</a>
 
       <p>BellaBeat is a high tech company whose products provide women with the data to regarding their wellness and health. </p>
@@ -167,7 +197,7 @@ a:hover {
 </p>
     </div>
     <div class="w3-quarter">
-      <img src="https://fun4stlkids.com/media/com_mtree/images/listings/m/5685.png" alt="Kode With Klossy" style="width:100%">
+      <img src="https://scontent-lga3-2.xx.fbcdn.net/v/t31.18172-8/24291474_1961279857232315_5001475987368128259_o.png?_nc_cat=105&ccb=1-7&_nc_sid=53a332&_nc_ohc=7jfad7sT-XoQ7kNvgF0FRly&_nc_zt=23&_nc_ht=scontent-lga3-2.xx&_nc_gid=A7QAY8zAumr9iFx-Yw9tVs9&oh=00_AYBE86-nZYEPjaOIGavf5Oh5K6ikdMiJujkwjsgp9DLi0g&oe=67538C68" alt="Kode With Klossy" style="width:100%">
       <h3>Kode With Klossy</h3>            <a href="https://www.kodewithklossy.com/" target="_blank">Website</a>
 
       <p>Kode With Klossy was launched in 2015 and aimed encourage girls from the ages of 13 to 18 to learn how  to code in a span of two weeks. Kode With Klossy has 50 coding camps in 25 US cities and is teaching roughly 1,000 girls to code. 
@@ -211,7 +241,7 @@ a:hover {
       <p>Zeba is a size inclusive brand that's size chart makes a big impact upon the audience.It's described as a "self-love revolution" and a movement that aims to redefine the fashion industry by challenging the typical sizing systems for clothing. </p>
     </div>
     <div class="w3-quarter">
-      <img src="https://leadersinheels.com/wp-content/uploads/2017/05/Quote-template-LH-new-style.jpg" alt="Croissant" style="width:100%">
+      <img src="https://scontent-lga3-2.xx.fbcdn.net/v/t39.30808-6/201173615_104866711868923_2756880620342389812_n.png?_nc_cat=104&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=ht9zZO8cdsMQ7kNvgG0Ym7l&_nc_zt=23&_nc_ht=scontent-lga3-2.xx&_nc_gid=ARTwI7-YCBFZOFKzop2Fhq6&oh=00_AYAWolOB_R7v6rqAw0mUIrIfd6OnEo9NLvjTLAYGIyxb8g&oe=6731FD07" alt="Croissant" style="width:100%">
       <h3>Leaders in Heels</h3>            <a href="https://leadersinheels.com/" target="_blank">Website</a>
 
       <p> U.S. statistic state that women  makeup 5 percent of CEO's in the nation. Leaders in Heels products were created to help women on the job to not only take notes and stay organized, but to also give emotional supportalso via encouraging messages. </p>
@@ -230,7 +260,7 @@ a:hover {
         <p>We Vote Next is a movement and summit that was created brings together youth leaders, activists and artists  to amplify and answer the voices, stories and concerns of first-time voters. </p>
     </div>
     <div class="w3-quarter">
-      <img src="https://now.givingtuesday.org/wp-content/themes/gtn/images/Logo.png" alt="Cherries" style="width:100%">
+      <img src="data:image/png;base64,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" alt="Cherries" style="width:100%">
       <h3>Giving Tuesday</h3>            <a href="https://www.givingtuesday.org/" target="_blank">Website</a>
 
       <p> Giving Tuesday is global generosity  movement that highlights acts of generosity through technology and social media.  </p>
@@ -263,7 +293,7 @@ a:hover {
       <p>BeadForLife is a non-profit organization that has been helping women living in poverty by being a medium to sell their handcrafted crafts. </p>
     </div>
     <div class="w3-quarter">
-      <img src="https://res-4.cloudinary.com/crunchbase-production/image/upload/c_lpad,f_auto,q_auto:eco/v1482424493/opcyu0wanm8ze3vf6pnk.png"  style="width:100%">
+      <img src="data:image/png;base64,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"  style="width:100%">
       <h3>RoHo</h3>            <a href="https://loveroho.com/" target="_blank">Website</a>
 
       <p> RoHo is a stylish social enterprise that partners with female artisans giving them access to an American market with a product line.</p>
@@ -290,7 +320,7 @@ a:hover {
       <p>The Malala Fund is a organization that provides girls with 12 years of education to achieve their potential and create positive change within their families and communities.</p>
     </div>
     <div class="w3-quarter">
-      <img src="https://i0.wp.com/shopladywolf.com/wp-content/uploads/2018/05/14713782_1224524470952981_4465002254827394813_n.jpg?fit=738%2C738&ssl=1" style="width:100%">
+      <img src="data:image/jpeg;base64,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" style="width:100%">
       <h3>Girls Who Code</h3>            <a href="https://girlswhocode.com/" target="_blank">Website</a>
 
       <p>Girls Who Code aims to empower high school girls with the computer science education and skill sets needed to pursue 21st century opportunities. </p>
