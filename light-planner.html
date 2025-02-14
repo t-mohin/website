@@ -76,8 +76,7 @@ type="image/gif" sizes="16x16">
 <style>
 body {
   font-family: 'Ovo', serif;
-  background: url('https://i.pinimg.com/736x/7d/d0/74/7dd074e560a62731c01bf9cf099dadb4.jpg') no-repeat center center fixed;
-  background-size: cover;
+  background: url('https://i.pinimg.com/736x/7d/d0/74/7dd074e560a62731c01bf9cf099dadb4.jpg') repeat;
   color: white;
   margin: 0;
   padding: 0;
@@ -85,6 +84,18 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  position: relative;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2); 
+  z-index: -1;
 }
 
 .container {
@@ -94,6 +105,7 @@ body {
   padding: 40px;
   width: 90%;
   max-width: 1200px;
+  z-index: 1;
 }
 
 .section {
@@ -112,7 +124,7 @@ h2 {
 }
 
 .quote p {
-  font-size: 18px; 
+  font-size: 16px; 
   font-family: 'Playfair Display', serif;
 }
 
@@ -150,14 +162,14 @@ input[type="text"]:focus {
   padding: 15px;
   text-align: center;
   border-radius: 50%;
-  border: 1px solid white; 
+  border: 1px solid white; /* Black outline for other days */
   transition: background 0.2s ease;
   cursor: pointer;
 }
 
 .day.today {
   font-weight: bold;
-  border: 1px solid black; 
+  border: 1px solid black; /* White outline for the current day */
 }
 
 .vibe-grid {
@@ -177,8 +189,9 @@ input[type="text"]:focus {
 }
 
 @media (max-width: 768px) {
-.container {
+  .container {
     grid-template-columns: 1fr;
+  }
 }
 </style>
 
@@ -189,8 +202,6 @@ const quotes = [
   "Every moment is a fresh beginning.",
   "Dream big and dare to fail.",
   "Act as if what you do makes a difference. It does."
-  "I would rather be a force than a burden."
-  
 ];
 
 let quoteIndex = 0;
