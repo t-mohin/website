@@ -3,6 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head> <link rel="icon" href="https://i.pinimg.com/736x/a0/39/bd/a039bd2b0e779f649625f4c2d194a4c0.jpg"
+type="image/gif" sizes="16x16">
+</head>
   <title>Planner</title>
   <link href="https://fonts.googleapis.com/css2?family=Ovo&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
@@ -55,11 +58,11 @@
       <div class="section">
         <h2>Vibes</h2>
         <div class="vibe-grid">
-          <img class="vibe-item" src="vibe1.jpg" alt="Vibe 1">
-          <img class="vibe-item" src="vibe2.jpg" alt="Vibe 2">
+          <img class="vibe-item" src="vibe.jpg" alt="Vibe 1">
+          <img class="vibe-item" src="vibe10.jpg" alt="Vibe 2">
           <img class="vibe-item" src="vibe3.jpg" alt="Vibe 3">
           <img class="vibe-item" src="vibe4.jpg" alt="Vibe 4">
-          <img class="vibe-item" src="vibe5.jpg" alt="Vibe 5">
+          <img class="vibe-item" src="vibe7.jpg" alt="Vibe 5">
           <img class="vibe-item" src="vibe6.jpg" alt="Vibe 6">
         </div>
       </div>
@@ -109,7 +112,7 @@ h2 {
 }
 
 .quote p {
-  font-size: 20px; /* Increased font size */
+  font-size: 18px; /* Increased font size */
   font-family: 'Playfair Display', serif;
 }
 
@@ -181,6 +184,12 @@ input[type="text"]:focus {
 </style>
 
 <script>
+window.addEventListener('load', () => {
+      const bgm = document.getElementById('bgm');
+      bgm.play().catch(error => {
+        console.log('Autoplay blocked, user interaction required:', error);
+      });
+    });
 // Rotating Quotes
 const quotes = [
   "Who you were, who you are, and who you will be are three different people.",
