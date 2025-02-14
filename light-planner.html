@@ -96,10 +96,8 @@ body {
   max-width: 1200px;
 }
 
-
-
 .section {
-  background: rgba(255, 231, 196, 0.21); /* #ffe7c4 with 21% transparency */
+  background: rgba(255, 231, 196, 0.21); 
   padding: 20px;
   border-radius: 15px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -114,7 +112,7 @@ h2 {
 }
 
 .quote p {
-  font-size: 12px; /* Increased font size */
+  font-size: 18px; 
   font-family: 'Playfair Display', serif;
 }
 
@@ -152,14 +150,14 @@ input[type="text"]:focus {
   padding: 15px;
   text-align: center;
   border-radius: 50%;
-  border: 1px solid white; /* Black outline for other days */
+  border: 1px solid white; 
   transition: background 0.2s ease;
   cursor: pointer;
 }
 
 .day.today {
   font-weight: bold;
-  border: 1px solid black; /* White outline for the current day */
+  border: 1px solid black; 
 }
 
 .vibe-grid {
@@ -179,8 +177,15 @@ input[type="text"]:focus {
 }
 
 @media (max-width: 768px) {
-  .container {
+.container {
     grid-template-columns: 1fr;
+    align-items: center;
+    justify-items: center;
+  }
+
+  .section {
+    width: 100%;
+    max-width: 500px;
   }
 }
 </style>
@@ -192,6 +197,8 @@ const quotes = [
   "Every moment is a fresh beginning.",
   "Dream big and dare to fail.",
   "Act as if what you do makes a difference. It does."
+  "I would rather be a force than a burden."
+  
 ];
 
 let quoteIndex = 0;
