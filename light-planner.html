@@ -12,10 +12,11 @@ type="image/gif" sizes="16x16">
 </head>
 <body>
   <!-- Background Music -->
-<audio id=bgm loop autoplay>
-    <source src="Minho and Kitty in the Rain.mp3" type="audio/mpeg">
-    Your browser does not support the audio element.
-  </audio>
+<audio id="bgm" controls autoplay loop>
+  <source src="Minho%20and%20Kitty%20in%20the%20Rain.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+
 
   <div class="container">
     <!-- Column 1: Applications + Quote -->
@@ -256,4 +257,6 @@ function generateCalendar(month, year) {
 }
 
 generateCalendar(currentMonth, currentYear);
+document.getElementById('bgm').muted = false;
+
 </script>
