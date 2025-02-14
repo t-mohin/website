@@ -112,7 +112,7 @@ h2 {
 }
 
 .quote p {
-  font-size: 18px; /* Increased font size */
+  font-size: 18px; 
   font-family: 'Playfair Display', serif;
 }
 
@@ -123,6 +123,7 @@ input[type="text"] {
   background: transparent;
   border: none;
   color: white;
+  font-family: 'Ovo', serif;
   font-size: 16px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.5);
   margin-bottom: 10px;
@@ -130,7 +131,8 @@ input[type="text"] {
 
 textarea::placeholder,
 input[type="text"]::placeholder {
-  color: rgba(255, 255, 255, 0.7);
+font-family: 'Ovo', serif;
+color: grey;
 }
 
 textarea:focus,
@@ -147,30 +149,29 @@ input[type="text"]:focus {
 }
 
 .day {
-  padding: 15px;
+  padding: 12px;
   text-align: center;
-  border-radius: 50%;
-  border: 1px solid black; /* Black outline for other days */
-  transition: background 0.2s ease;
+  transition: background 0.5s ease;
   cursor: pointer;
 }
 
 .day.today {
   font-weight: bold;
-  border: 1px solid white; /* White outline for the current day */
+  border-radius: 50%;
+  border: 1px solid white; 
 }
 
 .vibe-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 10px;
-  max-height: 200px;
+  max-height: 250px;
   overflow-y: auto;
 }
 
 .vibe-item {
   width: 100%;
-  height: 80px;
+  height: 90px;
   object-fit: cover;
   border-radius: 8px;
   transition: transform 0.3s ease;
@@ -179,7 +180,7 @@ input[type="text"]:focus {
 @media (max-width: 768px) {
 .container {
     grid-template-columns: 1fr;
-    align-items: center;
+
 }
 </style>
 
