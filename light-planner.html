@@ -12,14 +12,12 @@ type="image/gif" sizes="16x16">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <!-- Background Image -->
-  <img class="background-img" src="PlannerBackground.png" alt="Background Image">
-
   <!-- Background Music -->
-  <audio id="bgm" autoplay loop>
-    <source src="https://www.bensound.com/bensound-music/bensound-slowmotion.mp3" type="audio/mpeg">
-    Your browser does not support the audio element.
-  </audio>
+  <!-- Background Music -->
+<audio id="bgm" autoplay loop>
+  <source src="https://www.mfiles.co.uk/mp3-downloads/saint-saens-the-swan.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
 
   <div class="container">
     <!-- Column 1: Applications + Quote -->
@@ -63,10 +61,10 @@ type="image/gif" sizes="16x16">
         <h2>Vibes</h2>
         <div class="vibe-grid">
           <img class="vibe-item" src="vibe1.jpg" alt="Vibe 1">
-          <img class="vibe-item" src="vibe.jpg" alt="Vibe 2">
+          <img class="vibe-item" src="vibe2.jpg" alt="Vibe 2">
           <img class="vibe-item" src="vibe3.jpg" alt="Vibe 3">
           <img class="vibe-item" src="vibe4.jpg" alt="Vibe 4">
-          <img class="vibe-item" src="vibe8.jpg" alt="Vibe 5">
+          <img class="vibe-item" src="vibe5.jpg" alt="Vibe 5">
           <img class="vibe-item" src="vibe6.jpg" alt="Vibe 6">
         </div>
       </div>
@@ -80,25 +78,17 @@ type="image/gif" sizes="16x16">
 <style>
 body {
   font-family: 'Ovo', serif;
-      color: white;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-      overflow: hidden;
-    }
+  background: url('PlannerBackground.png') no-repeat center center fixed;
+  background-size: cover;
+  color: white;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
 
-    .background-img {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: -1;
-      object-fit: cover;
-    }
 .container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
