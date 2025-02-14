@@ -12,7 +12,7 @@ type="image/gif" sizes="16x16">
 </head>
 <body>
   <!-- Background Music -->
-<audio id="bgm" controls autoplay loop>
+<audio id="bgm" autoplay loop>
   <source src="https://t-mohin.github.io/website/Minho%20and%20Kitty%20in%20the%20Rain.mp3" type="audio/mpeg">
   Your browser does not support the audio element.
 </audio>
@@ -199,6 +199,10 @@ input[type="text"]:focus {
 </style>
 
 <script>
+  document.getElementById('playBtn').addEventListener('click', function() {
+    const audio = document.getElementById('bgm');
+    audio.play().catch(err => console.error('Playback failed:', err));
+  });
 // Rotating Quotes
 const quotes = [
   "Who you were, who you are, and who you will be are three different people.",
@@ -257,6 +261,5 @@ function generateCalendar(month, year) {
 }
 
 generateCalendar(currentMonth, currentYear);
-document.getElementById('bgm').muted = false;
 
 </script>
