@@ -130,7 +130,6 @@
       }
     }
     
-    /* Custom Play/Pause Button */
     #playBtn {
       position: fixed;
       bottom: 20px;
@@ -140,7 +139,7 @@
       border: none;
       border-radius: 50%;
       background-color: transparent;
-      color: white;
+      color: rgba(255, 231, 196, 0.21);
       font-size: 20px;
       cursor: pointer;
       z-index: 1000;
@@ -149,13 +148,10 @@
   </style>
 </head>
 <body>
-  <!-- Background Music -->
   <audio id="bgm" autoplay loop>
     <source src="https://t-mohin.github.io/website/Minho%20and%20Kitty%20in%20the%20Rain.mp3" type="audio/mpeg">
-    Your browser does not support the audio element.
   </audio>
 
-  <!-- Main Content -->
   <div class="container">
     <!-- Column 1: Applications + Quote -->
     <div class="column">
@@ -208,15 +204,12 @@
     </div>
   </div>
 
-  <!-- Custom Play/Pause Button -->
   <button id="playBtn" title="Play/Pause"></button>
 
-  <!-- External Script (if needed) -->
   <script src="script.js"></script>
   
   <!-- Rotating Quotes and Calendar Script -->
   <script>
-    // Rotating Quotes
     const quotes = [
       "Who you were, who you are, and who you will be are three different people.",
       "Every moment is a fresh beginning.",
@@ -243,23 +236,19 @@
     const currentMonth = currentDate.getMonth();
     const currentYear = currentDate.getFullYear();
     
-    // Update calendar title
     document.getElementById("calendar-title").textContent = `${monthNames[currentMonth]} ${currentYear}`;
     
-    // Generate calendar days for the current month
     function generateCalendar(month, year) {
       calendarGrid.innerHTML = ""; // Clear existing days
       const firstDay = new Date(year, month, 1).getDay();
       const daysInMonth = new Date(year, month + 1, 0).getDate();
     
-      // Add blank days for alignment
       for (let i = 0; i < firstDay; i++) {
         const blankDay = document.createElement("div");
         blankDay.classList.add("day");
         calendarGrid.appendChild(blankDay);
       }
     
-      // Add each day, highlighting today's date
       for (let day = 1; day <= daysInMonth; day++) {
         const dayElement = document.createElement("div");
         dayElement.classList.add("day");
@@ -298,7 +287,6 @@
       }
     });
 
-    // Update the button icon when the audio state changes
     audio.addEventListener('play', () => {
       playBtn.textContent = '❚❚';
     });
