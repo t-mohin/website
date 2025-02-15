@@ -303,7 +303,7 @@
     const vibeImages = document.querySelectorAll('.vibe-item');
     vibeImages.forEach(img => {
       img.addEventListener('click', () => {
-        document.body.style.background = `url(${img.src}) repeat center fixed`;
+        document.body.style.background = `url(${img.src}) repeat center;
         document.body.style.backgroundSize = "cover";
       });
     });
