@@ -8,10 +8,10 @@
   <link href="https://fonts.googleapis.com/css2?family=Ovo&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <style>
-    /* Base Styles */
     body {
       font-family: 'Ovo', serif;
       background: url('https://i.pinimg.com/736x/7d/d0/74/7dd074e560a62731c01bf9cf099dadb4.jpg') repeat center;
+      background-size: cover;
       color: white;
       margin: 0;
       padding: 0;
@@ -122,6 +122,7 @@
       object-fit: cover;
       border-radius: 8px;
       transition: transform 0.3s ease;
+      cursor: pointer;
     }
     
     @media (max-width: 768px) {
@@ -130,6 +131,7 @@
       }
     }
     
+    /* Custom Play/Pause Button */
     #playBtn {
       position: fixed;
       bottom: 20px;
@@ -139,7 +141,7 @@
       border: none;
       border-radius: 50%;
       background-color: transparent;
-      color: rgba(255, 231, 196, 0.21);
+      color: rgba(255, 231, 196, 0.5);
       font-size: 20px;
       cursor: pointer;
       z-index: 1000;
@@ -148,7 +150,8 @@
   </style>
 </head>
 <body>
-  <audio id="bgm" autoplay loop>
+  <!-- Background Music -->
+  <audio id="bgm" preload="auto" autoplay loop>
     <source src="https://t-mohin.github.io/website/Minho%20and%20Kitty%20in%20the%20Rain.mp3" type="audio/mpeg">
   </audio>
 
@@ -204,12 +207,14 @@
     </div>
   </div>
 
+  <!-- Custom Play/Pause Button -->
   <button id="playBtn" title="Play/Pause"></button>
 
   <script src="script.js"></script>
   
   <!-- Rotating Quotes and Calendar Script -->
   <script>
+    // Rotating Quotes
     const quotes = [
       "Who you were, who you are, and who you will be are three different people.",
       "Every moment is a fresh beginning.",
@@ -239,7 +244,7 @@
     document.getElementById("calendar-title").textContent = `${monthNames[currentMonth]} ${currentYear}`;
     
     function generateCalendar(month, year) {
-      calendarGrid.innerHTML = ""; // Clear existing days
+      calendarGrid.innerHTML = "";
       const firstDay = new Date(year, month, 1).getDay();
       const daysInMonth = new Date(year, month + 1, 0).getDate();
     
@@ -270,10 +275,8 @@
     const audio = document.getElementById('bgm');
     const playBtn = document.getElementById('playBtn');
 
-    // Set initial button icon based on audio state
     playBtn.textContent = audio.paused ? '►' : '❚❚';
 
-    // Toggle play/pause on button click
     playBtn.addEventListener('click', function () {
       if (audio.paused) {
         audio.play().then(() => {
@@ -292,6 +295,17 @@
     });
     audio.addEventListener('pause', () => {
       playBtn.textContent = '►';
+    });
+  </script>
+  
+  <!-- Vibe Selection Script -->
+  <script>
+    const vibeImages = document.querySelectorAll('.vibe-item');
+    vibeImages.forEach(img => {
+      img.addEventListener('click', () => {
+        document.body.style.background = `url(${img.src}) repeat center fixed`;
+        document.body.style.backgroundSize = "cover";
+      });
     });
   </script>
 </body>
