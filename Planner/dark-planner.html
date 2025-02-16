@@ -286,7 +286,7 @@ input[type="text"]:focus {
     const vibeImages = document.querySelectorAll('.vibe-item');
     vibeImages.forEach(img => {
       img.addEventListener('click', () => {
-        document.body.style.background = `url(${img.src}) repeat`;
+        document.body.style.background = `url(${img.src}) repeat;
         document.body.style.backgroundSize = "auto";
       });
     });
