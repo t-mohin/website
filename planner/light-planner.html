@@ -302,9 +302,7 @@
     const vibeImages = document.querySelectorAll('.vibe-item');
     vibeImages.forEach(img => {
       img.addEventListener('click', () => {
-        // Change the body's background to a tiled version of the selected image.
         document.body.style.background = `url(${img.src}) repeat`;
-        // Ensure backgroundSize is set to auto so it tiles naturally.
         document.body.style.backgroundSize = "auto";
       });
     });
