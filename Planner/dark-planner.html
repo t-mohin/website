@@ -283,12 +283,12 @@ input[type="text"]:focus {
   <!-- Vibe Selection Script -->
   <script>
     const vibeImages = document.querySelectorAll('.vibe-item');
-    vibeImages.forEach(img => {
-      img.addEventListener('click', () => {
-        document.body.style.background = `url(${img.src}) no-repeat center center fixed;
-        document.body.style.backgroundSize = "auto";
-      });
-    });
+vibeImages.forEach(img => {
+  img.addEventListener('click', () => {
+    document.body.style.background = `url(${img.src}) no-repeat center center fixed`;
+    document.body.style.backgroundSize = "cover";
+  });
+});
   </script>
 </body>
 </html>
