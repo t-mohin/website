@@ -271,16 +271,30 @@
   
   <!-- Custom Play/Pause Button Script -->
   <script>
- var vAudio = document.getElementById("bgm");
-   var hasInit = false;
-   function playMusic()
-   {
-      if(!hasInit)
-      {
-          hasInit = true;
-          vAudio.play();
+    const audio = document.getElementById('bgm');
+    const playBtn = document.getElementById('playBtn');
+
+    playBtn.textContent = audio.paused ? '►' : '❚❚';
+
+    playBtn.addEventListener('click', function () {
+      if (audio.paused) {
+        audio.play().then(() => {
+          playBtn.textContent = '❚❚';
+        }).catch(err => {
+          console.error("Playback failed:", err);
+        });
+      } else {
+        audio.pause();
+        playBtn.textContent = '►';
       }
-   }
+    });
+
+    audio.addEventListener('play', () => {
+      playBtn.textContent = '❚❚';
+    });
+    audio.addEventListener('pause', () => {
+      playBtn.textContent = '►';
+    });
   </script>
   
   <!-- Vibe Selection Script -->
