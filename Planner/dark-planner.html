@@ -125,7 +125,7 @@ input[type="text"]:focus {
       border: none;
       border-radius: 50%;
       background-color: transparent;
-      color: rgba(255, 255, 255, 0.75); 
+      color: rgba(255, 255, 255, 1); 
       font-size: 20px;
       cursor: pointer;
       z-index: 1000;
@@ -179,7 +179,7 @@ input[type="text"]:focus {
         <h2>Vibes</h2>
         <div class="vibe-grid">
           <img class="vibe-item" src="vibe11.jpg" alt="Vibe 1" />
-          <img class="vibe-item" src="vibe.jpg" alt="Vibe 2" />
+          <img class="vibe-item" src="vibe6.jpg" alt="Vibe 2" />
           <img class="vibe-item" src="vibe13.jpg" alt="Vibe 3" />
           <img class="vibe-item" src="vibe5.jpg" alt="Vibe 4" />
           <img class="vibe-item" src="vibe9.jpg" alt="Vibe 5" />
@@ -285,7 +285,7 @@ input[type="text"]:focus {
     const vibeImages = document.querySelectorAll('.vibe-item');
     vibeImages.forEach(img => {
       img.addEventListener('click', () => {
-        document.body.style.background = `url(${img.src}) repeat`;
+        document.body.style.background = `url(${img.src}) no-repeat center;
         document.body.style.backgroundSize = "auto";
       });
     });
