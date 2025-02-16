@@ -182,7 +182,7 @@ input[type="text"]:focus {
           <img class="vibe-item" src="vibe6.jpg" alt="Vibe 2" />
           <img class="vibe-item" src="vibe13.jpg" alt="Vibe 3" />
           <img class="vibe-item" src="vibe5.jpg" alt="Vibe 4" />
-          <img class="vibe-item" src="PlannerBackdrop.jpg" alt="Vibe 5" />
+          <img class="vibe-item" src="backdrop.jpg" alt="Vibe 5" />
            <img class="vibe-item" src="vibe9.jpg" alt="Vibe 6" />
         </div>
       </div>
@@ -285,8 +285,8 @@ input[type="text"]:focus {
     const vibeImages = document.querySelectorAll('.vibe-item');
 vibeImages.forEach(img => {
   img.addEventListener('click', () => {
-    document.body.style.background = `url(${img.src}) no-repeat center center fixed`;
-    document.body.style.backgroundSize = "cover";
+    document.body.style.background = `url(${img.src})repeat center;
+    document.body.style.backgroundSize = "auto";
   });
 });
   </script>
