@@ -2,11 +2,11 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Planner</title>
-
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <head> <link rel="icon" href="https://media.istockphoto.com/id/1372967662/vector/seamless-pattern-with-tulips-and-leaves-vector.jpg?s=612x612&w=0&k=20&c=XgTi2J0wY93GD7MKZaQLPzuvZovh3J5pFxxo3JMVf8U="
 type="image/gif" sizes="16x16">
+  <title>Planner</title>
+
 </head>
 <style>
 body {
@@ -283,14 +283,14 @@ input[type="text"]:focus {
   </script>
   
   <!-- Vibe Selection Script -->
-  <script>
+   <script>
     const vibeImages = document.querySelectorAll('.vibe-item');
-vibeImages.forEach(img => {
-  img.addEventListener('click', () => {
-    document.body.style.background = `url(${img.src})repeat center;
-    document.body.style.backgroundSize = "auto";
-  });
-});
+    vibeImages.forEach(img => {
+      img.addEventListener('click', () => {
+        document.body.style.background = `url(${img.src}) repeat`;
+        document.body.style.backgroundSize = "auto";
+      });
+    });
   </script>
 </body>
 </html>
