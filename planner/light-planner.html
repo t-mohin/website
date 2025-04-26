@@ -130,7 +130,17 @@
       }
     }
     
-    /* Custom Play/Pause Button */
+    li.removing {
+      background: rgba(255, 231, 196, 0.5);
+      opacity: 0.5;
+      transition: background 0.5s ease-out, opacity 0.5s ease-out;
+    }
+
+    li.checked {
+      text-decoration: line-through;
+      color: rgba(255, 255, 255, 0.5);
+    }
+
     #playBtn {
       position: fixed;
       bottom: 20px;
@@ -149,13 +159,11 @@
   </style>
 </head>
 <body>
-  <!-- Background Music -->
   <audio id="bgm" preload="auto" autoplay loop>
     <source src="https://t-mohin.github.io/website/planner/Minho%20and%20Kitty%20in%20the%20Rain.mp3" type="audio/mpeg" />
   </audio>
 
   <div class="container">
-    <!-- Column 1: Applications + Quote -->
     <div class="column">
       <div class="section" id="applications">
         <h2 id="applications-title">Notes</h2>
@@ -166,27 +174,25 @@
       </div>
     </div>
 
-    <!-- Column 2: Monthly Goals -->
     <div class="column">
       <div class="section">
         <h2>Goals</h2>
-        <ul id="goals">
-          <li><input type="text" placeholder="Goal 1" /></li>
-          <li><input type="text" placeholder="Goal 2" /></li>
-          <li><input type="text" placeholder="Goal 3" /></li>
-          <li><input type="text" placeholder="Goal 4" /></li>
-          <li><input type="text" placeholder="Goal 5" /></li>
-          <li><input type="text" placeholder="Goal 6" /></li>
-          <li><input type="text" placeholder="Goal 7" /></li>
-          <li><input type="text" placeholder="Goal 8" /></li>
-          <li><input type="text" placeholder="Goal 9" /></li>
-          <li><input type="text" placeholder="Goal 10" /></li>
-          <li><input type="text" placeholder="Goal 11" /></li>
-        </ul>
+        <div id="goals">
+          <div class="goal-item"><input type="checkbox"> <input type="text" placeholder="Goal 1" /></div>
+          <div class="goal-item"><input type="checkbox"> <input type="text" placeholder="Goal 2" /></div>
+          <div class="goal-item"><input type="checkbox"> <input type="text" placeholder="Goal 3" /></div>
+          <div class="goal-item"><input type="checkbox"> <input type="text" placeholder="Goal 4" /></div>
+          <div class="goal-item"><input type="checkbox"> <input type="text" placeholder="Goal 5" /></div>
+          <div class="goal-item"><input type="checkbox"> <input type="text" placeholder="Goal 6" /></div>
+          <div class="goal-item"><input type="checkbox"> <input type="text" placeholder="Goal 7" /></div>
+          <div class="goal-item"><input type="checkbox"> <input type="text" placeholder="Goal 8" /></div>
+          <div class="goal-item"><input type="checkbox"> <input type="text" placeholder="Goal 9" /></div>
+          <div class="goal-item"><input type="checkbox"> <input type="text" placeholder="Goal 10" /></div>
+          <div class="goal-item"><input type="checkbox"> <input type="text" placeholder="Goal 11" /></div>
+        </div>
       </div>
     </div>
 
-    <!-- Column 3: Calendar + Vibes -->
     <div class="column">
       <div class="section">
         <h2 id="calendar-title"></h2>
@@ -206,71 +212,64 @@
     </div>
   </div>
 
-  <!-- Custom Play/Pause Button -->
   <button id="playBtn" title="Play/Pause"></button>
 
   <script src="script.js"></script>
-  
-  <!-- Rotating Quotes and Calendar Script -->
+
   <script>
-    // Rotating Quotes
     const quotes = [
       "Who you were, who you are, and who you will be are three different people.",
       "Every moment is a fresh beginning.",
       "Dream big and dare to fail.",
       "Act as if what you do makes a difference. It does."
     ];
-    
+
     let quoteIndex = 0;
     const quoteElement = document.getElementById("quote");
-    
+
     setInterval(() => {
       quoteIndex = (quoteIndex + 1) % quotes.length;
       quoteElement.textContent = quotes[quoteIndex];
     }, 5000);
-    
-    // Calendar Auto-Update
+
     const calendarGrid = document.getElementById("calendar");
     const monthNames = [
       "January", "February", "March", "April", "May", "June",
       "July", "August", "September", "October", "November", "December"
     ];
-    
+
     const currentDate = new Date();
     const currentMonth = currentDate.getMonth();
     const currentYear = currentDate.getFullYear();
-    
+
     document.getElementById("calendar-title").textContent = `${monthNames[currentMonth]} ${currentYear}`;
-    
+
     function generateCalendar(month, year) {
       calendarGrid.innerHTML = "";
       const firstDay = new Date(year, month, 1).getDay();
       const daysInMonth = new Date(year, month + 1, 0).getDate();
-    
+
       for (let i = 0; i < firstDay; i++) {
         const blankDay = document.createElement("div");
         blankDay.classList.add("day");
         calendarGrid.appendChild(blankDay);
       }
-    
+
       for (let day = 1; day <= daysInMonth; day++) {
         const dayElement = document.createElement("div");
         dayElement.classList.add("day");
         dayElement.textContent = day;
-    
+
         if (day === currentDate.getDate() && month === currentMonth && year === currentYear) {
           dayElement.classList.add("today");
         }
-    
+
         calendarGrid.appendChild(dayElement);
       }
     }
-    
+
     generateCalendar(currentMonth, currentYear);
-  </script>
-  
-  <!-- Custom Play/Pause Button Script -->
-  <script>
+
     const audio = document.getElementById('bgm');
     const playBtn = document.getElementById('playBtn');
 
@@ -295,16 +294,26 @@
     audio.addEventListener('pause', () => {
       playBtn.textContent = '►';
     });
-  </script>
-  
-  <!-- Vibe Selection Script -->
-  <script>
-    const vibeImages = document.querySelectorAll('.vibe-item');
-    vibeImages.forEach(img => {
-      img.addEventListener('click', () => {
-        document.body.style.background = `url(${img.src}) repeat`;
-        document.body.style.backgroundSize = "auto";
-      });
+
+    const goalsList = document.getElementById('goals');
+
+    goalsList.addEventListener('change', function (e) {
+      if (e.target.matches('input[type="checkbox"]')) {
+        const goalItem = e.target.closest('.goal-item');
+        const goalText = goalItem.querySelector('input[type="text"]');
+        if (e.target.checked) {
+          goalText.classList.add('checked');
+          setTimeout(() => {
+            goalItem.classList.add('removing');
+            setTimeout(() => {
+              goalItem.remove();
+            }, 300);
+          }, 45000); // Remove after 45 seconds
+        } else {
+          goalText.classList.remove('checked');
+          goalItem.classList.remove('removing');
+        }
+      }
     });
   </script>
 </body>
