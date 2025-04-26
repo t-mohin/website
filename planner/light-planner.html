@@ -129,14 +129,25 @@
         grid-template-columns: 1fr;
       }
     }
-    
+
+    /* Flexbox for checkbox and text alignment */
+    .goal-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .goal-item input[type="checkbox"] {
+      margin-right: 10px;
+    }
+
     li.removing {
       background: rgba(255, 231, 196, 0.5);
       opacity: 0.5;
       transition: background 0.5s ease-out, opacity 0.5s ease-out;
     }
 
-    li.checked {
+    li.checked input[type="text"] {
       text-decoration: line-through;
       color: rgba(255, 255, 255, 0.5);
     }
@@ -178,17 +189,17 @@
       <div class="section">
         <h2>Goals</h2>
         <div id="goals">
-          <div class="goal-item"><input type="checkbox"> <input type="text" placeholder="Goal 1" /></div>
-          <div class="goal-item"><input type="checkbox"> <input type="text" placeholder="Goal 2" /></div>
-          <div class="goal-item"><input type="checkbox"> <input type="text" placeholder="Goal 3" /></div>
-          <div class="goal-item"><input type="checkbox"> <input type="text" placeholder="Goal 4" /></div>
-          <div class="goal-item"><input type="checkbox"> <input type="text" placeholder="Goal 5" /></div>
-          <div class="goal-item"><input type="checkbox"> <input type="text" placeholder="Goal 6" /></div>
-          <div class="goal-item"><input type="checkbox"> <input type="text" placeholder="Goal 7" /></div>
-          <div class="goal-item"><input type="checkbox"> <input type="text" placeholder="Goal 8" /></div>
-          <div class="goal-item"><input type="checkbox"> <input type="text" placeholder="Goal 9" /></div>
-          <div class="goal-item"><input type="checkbox"> <input type="text" placeholder="Goal 10" /></div>
-          <div class="goal-item"><input type="checkbox"> <input type="text" placeholder="Goal 11" /></div>
+          <div class="goal-item"><input type="checkbox"> <input type="text" /></div>
+          <div class="goal-item"><input type="checkbox"> <input type="text" /></div>
+          <div class="goal-item"><input type="checkbox"> <input type="text" /></div>
+          <div class="goal-item"><input type="checkbox"> <input type="text" /></div>
+          <div class="goal-item"><input type="checkbox"> <input type="text" /></div>
+          <div class="goal-item"><input type="checkbox"> <input type="text" /></div>
+          <div class="goal-item"><input type="checkbox"> <input type="text" /></div>
+          <div class="goal-item"><input type="checkbox"> <input type="text" /></div>
+          <div class="goal-item"><input type="checkbox"> <input type="text" /></div>
+          <div class="goal-item"><input type="checkbox"> <input type="text" /></div>
+          <div class="goal-item"><input type="checkbox"> <input type="text" /></div>
         </div>
       </div>
     </div>
@@ -302,18 +313,28 @@
         const goalItem = e.target.closest('.goal-item');
         const goalText = goalItem.querySelector('input[type="text"]');
         if (e.target.checked) {
-          goalText.classList.add('checked');
+          goalItem.classList.add('checked');
           setTimeout(() => {
             goalItem.classList.add('removing');
             setTimeout(() => {
               goalItem.remove();
             }, 300);
-          }, 45000); // Remove after 45 seconds
+          }, 5000); // Remove after 45 seconds
         } else {
-          goalText.classList.remove('checked');
+          goalItem.classList.remove('checked');
           goalItem.classList.remove('removing');
         }
       }
+    });
+
+    const vibeImages = document.querySelectorAll('.vibe-item');
+    vibeImages.forEach(img => {
+      img.addEventListener('click', () => {
+        // Change the body's background to a tiled version of the selected image.
+        document.body.style.background = `url(${img.src}) repeat`;
+        // Ensure backgroundSize is set to auto so it tiles naturally.
+        document.body.style.backgroundSize = "auto";
+      });
     });
   </script>
 </body>
