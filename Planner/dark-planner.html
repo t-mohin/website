@@ -3,120 +3,128 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <head> <link rel="icon" href="https://media.istockphoto.com/id/1372967662/vector/seamless-pattern-with-tulips-and-leaves-vector.jpg?s=612x612&w=0&k=20&c=XgTi2J0wY93GD7MKZaQLPzuvZovh3J5pFxxo3JMVf8U="
-type="image/gif" sizes="16x16">
+  <link rel="icon" href="https://media.istockphoto.com/id/1372967662/vector/seamless-pattern-with-tulips-and-leaves-vector.jpg?s=612x612&w=0&k=20&c=XgTi2J0wY93GD7MKZaQLPzuvZovh3J5pFxxo3JMVf8U=" type="image/gif" sizes="16x16">
   <title>Planner</title>
-</head>
-<style>
-body {
-  font-family: 'Ovo', serif;
-  background: url('https://i.pinimg.com/736x/e6/32/ff/e632ffba86a267b9d49f76be9f842766.jpg') repeat center;
-  background-size: auto;
-  color: white;
-  margin: 0;
-  padding: 0;
+  <style>
+    body {
+      font-family: 'Ovo', serif;
+      background: url('https://i.pinimg.com/736x/e6/32/ff/e632ffba86a267b9d49f76be9f842766.jpg') repeat center;
+      background-size: auto;
+      color: white;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+      padding: 40px;
+      width: 90%;
+      max-width: 1200px;
+    }
+
+    .section {
+      background: rgba(0, 0, 0, 0.4);
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      backdrop-filter: blur(10px);
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .quote p {
+      font-size: 18px;
+      font-family: 'Playfair Display', serif;
+    }
+
+    textarea, input[type="text"] {
+      width: 100%;
+      padding: 10px;
+      background: transparent;
+      border: none;
+      color: white;
+      font-family: 'Ovo', serif;
+      font-size: 16px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+      margin-bottom: 10px;
+    }
+
+    textarea::placeholder, input[type="text"]::placeholder {
+      color: grey;
+    }
+
+    textarea:focus, input[type="text"]:focus {
+      outline: none;
+      border-bottom: 1px solid white;
+    }
+
+    .calendar-grid {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      gap: 10px;
+      text-align: center;
+    }
+
+    .day {
+      padding: 12px;
+      text-align: center;
+      transition: background 0.5s ease;
+      cursor: pointer;
+    }
+
+    .day.today {
+      font-weight: bold;
+      border-radius: 50%;
+      border: 1px solid white;
+    }
+
+    .vibe-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      max-height: 250px;
+      overflow-y: auto;
+    }
+
+    .vibe-item {
+      width: 100%;
+      height: 90px;
+      object-fit: cover;
+      border-radius: 8px;
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+    .goal-item {
   display: flex;
-  justify-content: center;
   align-items: center;
-  min-height: 100vh;
-}
-
-.container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
-  padding: 40px;
-  width: 90%;
-  max-width: 1200px;
-}
-
-.section {
-  background: rgba(0, 0, 0, 0.4);
-  padding: 20px;
-  border-radius: 15px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  backdrop-filter: blur(10px);
-  margin-bottom: 20px;
-}
-
-h2 {
-  font-family: 'Playfair Display', serif;
-  font-size: 24px;
+  gap: 10px; 
   margin-bottom: 10px;
 }
-
-.quote p {
-  font-size: 18px; 
-  font-family: 'Playfair Display', serif;
+.goal-item input[type="checkbox"] {
+  flex: 0 0 auto;
+}
+.goal-item input[type="text"] {
+  flex: 1; 
 }
 
-textarea,
-input[type="text"] {
-  width: 100%;
-  padding: 10px;
-  background: transparent;
-  border: none;
-  color: white;
-  font-family: 'Ovo', serif;
-  font-size: 16px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
-  margin-bottom: 10px;
-}
-
-textarea::placeholder,
-input[type="text"]::placeholder {
-font-family: 'Ovo', serif;
-color: grey;
-}
-
-textarea:focus,
-input[type="text"]:focus {
-  outline: none;
-  border-bottom: 1px solid white;
-}
-
-.calendar-grid {
-  display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  gap: 10px;
-  text-align: center;
-}
-
-.day {
-  padding: 12px;
-  text-align: center;
-  transition: background 0.5s ease;
-  cursor: pointer;
-}
-
-.day.today {
-  font-weight: bold;
-  border-radius: 50%;
-  border: 1px solid white; 
-}
-
-.vibe-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
-  max-height: 250px;
-  overflow-y: auto;
-}
-
-.vibe-item {
-  width: 100%;
-  height: 90px;
-  object-fit: cover;
-  border-radius: 8px;
-  transition: transform 0.3s ease;
-}
 
     @media (max-width: 768px) {
       .container {
         grid-template-columns: 1fr;
       }
     }
-    
+
     #playBtn {
       position: fixed;
       bottom: 20px;
@@ -126,184 +134,209 @@ input[type="text"]:focus {
       border: none;
       border-radius: 50%;
       background-color: transparent;
-      color: rgba(255, 255, 255, 0.90); 
+      color: rgba(255, 255, 255, 0.90);
       font-size: 20px;
       cursor: pointer;
       z-index: 1000;
       outline: none;
     }
+
+    .goal-item.checked input[type="text"] {
+      text-decoration: line-through;
+      opacity: 0.6;
+    }
   </style>
-</style>
- <!-- Background Music -->
-  <audio id="bgm" preload="auto" autoplay loop>
-    <source src="https://t-mohin.github.io/website/Planner/I%20Love%20You%20Charlotte.mp3" />
-  </audio>
-  <div class="container">
-    <!-- Column 1: Applications + Quote -->
-    <div class="column">
-      <div class="section" id="applications">
-        <h2 id="applications-title">Notes</h2>
-        <textarea rows="21" placeholder="List notes here..."></textarea>
-      </div>
-      <div class="section quote">
-        <p id="quote">"Who you were, who you are, and who you will be are three different people."</p>
-      </div>
+</head>
+<body>
+
+<!-- Background Music -->
+<audio id="bgm" preload="auto" autoplay loop>
+  <source src="https://t-mohin.github.io/website/Planner/I%20Love%20You%20Charlotte.mp3" type="audio/mpeg" />
+</audio>
+
+<div class="container">
+  <!-- Column 1: Notes + Quote -->
+  <div class="column">
+    <div class="section" id="applications">
+      <h2>Notes</h2>
+      <textarea rows="21" placeholder="List notes here..."></textarea>
     </div>
-
-    <!-- Column 2: Monthly Goals -->
-
-    <div class="column">
-      <div class="section">
-        <h2>To Do List</h2>
-        <div id="goals">
-          <div class="goal-item"><input type="checkbox"> <input type="text" /></div>
-          <div class="goal-item"><input type="checkbox"> <input type="text" /></div>
-          <div class="goal-item"><input type="checkbox"> <input type="text" /></div>
-          <div class="goal-item"><input type="checkbox"> <input type="text" /></div>
-          <div class="goal-item"><input type="checkbox"> <input type="text" /></div>
-          <div class="goal-item"><input type="checkbox"> <input type="text" /></div>
-          <div class="goal-item"><input type="checkbox"> <input type="text" /></div>
-          <div class="goal-item"><input type="checkbox"> <input type="text" /></div>
-          <div class="goal-item"><input type="checkbox"> <input type="text" /></div>
-          <div class="goal-item"><input type="checkbox"> <input type="text" /></div>
-        </div>
-      </div>
+    <div class="section quote">
+      <p id="quote">"Who you were, who you are, and who you will be are three different people."</p>
     </div>
+  </div>
 
-    <!-- Column 3: Calendar + Vibes -->
-    <div class="column">
-      <div class="section">
-        <h2 id="calendar-title"></h2>
-        <div class="calendar-grid" id="calendar"></div>
-      </div>
-      <div class="section">
-        <h2>Vibes</h2>
-        <div class="vibe-grid">
-          <img class="vibe-item" src="4.jpg" alt="Vibe 1" />
-          <img class="vibe-item" src="vibe6.jpg" alt="Vibe 2" />
-          <img class="vibe-item" src="5.jpg" alt="Vibe 3" />
-          <img class="vibe-item" src="2.jpg" alt="Vibe 4" />
-           <img class="vibe-item" src="6.jpg" alt="Vibe 5" />
-           <img class="vibe-item" src="backdrop.jpg" alt="Vibe 6" />
-        </div>
+  <!-- Column 2: To Do List -->
+  <div class="column">
+    <div class="section">
+      <h2>To Do List</h2>
+      <div id="goals">
+        <!-- 10 Goal Items -->
+     ('<div class="goal-item"><input type="checkbox"> <input type="text" /></div>')
       </div>
     </div>
   </div>
 
-  <!-- Custom Play/Pause Button -->
+  <!-- Column 3: Calendar + Vibes -->
+  <div class="column">
+    <div class="section">
+      <h2 id="calendar-title"></h2>
+      <div class="calendar-grid" id="calendar"></div>
+    </div>
+    <div class="section">
+      <h2>Vibes</h2>
+      <div class="vibe-grid">
+        <img class="vibe-item" src="4.jpg" alt="Vibe 1" />
+        <img class="vibe-item" src="vibe6.jpg" alt="Vibe 2" />
+        <img class="vibe-item" src="5.jpg" alt="Vibe 3" />
+        <img class="vibe-item" src="2.jpg" alt="Vibe 4" />
+        <img class="vibe-item" src="6.jpg" alt="Vibe 5" />
+        <img class="vibe-item" src="backdrop.jpg" alt="Vibe 6" />
+      </div>
+    </div>
+  </div>
+</div>
 
-  <button id="playBtn" title="Play/Pause"></button>
+<!-- Play/Pause Button -->
+<button id="playBtn" title="Play/Pause"></button>
 
-  <script src="script.js"></script>
+<script>
+  const quotes = [
+    "Who you were, who you are, and who you will be are three different people.",
+    "Every moment is a fresh beginning.",
+    "Dream big and dare to fail.",
+    "Act as if what you do makes a difference. It does."
+  ];
 
-  <script>
-    const quotes = [
-      "Who you were, who you are, and who you will be are three different people.",
-      "Every moment is a fresh beginning.",
-      "Dream big and dare to fail.",
-      "Act as if what you do makes a difference. It does."
-    ];
+  let quoteIndex = 0;
+  const quoteElement = document.getElementById("quote");
 
-    let quoteIndex = 0;
-    const quoteElement = document.getElementById("quote");
+  setInterval(() => {
+    quoteIndex = (quoteIndex + 1) % quotes.length;
+    quoteElement.textContent = quotes[quoteIndex];
+  }, 5000);
 
-    setInterval(() => {
-      quoteIndex = (quoteIndex + 1) % quotes.length;
-      quoteElement.textContent = quotes[quoteIndex];
-    }, 5000);
+  const calendarGrid = document.getElementById("calendar");
+  const monthNames = [
+    "January", "February", "March", "April", "May", "June",
+    "July", "August", "September", "October", "November", "December"
+  ];
 
-    const calendarGrid = document.getElementById("calendar");
-    const monthNames = [
-      "January", "February", "March", "April", "May", "June",
-      "July", "August", "September", "October", "November", "December"
-    ];
+  const currentDate = new Date();
+  const currentMonth = currentDate.getMonth();
+  const currentYear = currentDate.getFullYear();
 
-    const currentDate = new Date();
-    const currentMonth = currentDate.getMonth();
-    const currentYear = currentDate.getFullYear();
+  document.getElementById("calendar-title").textContent = `${monthNames[currentMonth]} ${currentYear}`;
 
-    document.getElementById("calendar-title").textContent = `${monthNames[currentMonth]} ${currentYear}`;
+  function generateCalendar(month, year) {
+    calendarGrid.innerHTML = "";
+    const firstDay = new Date(year, month, 1).getDay();
+    const daysInMonth = new Date(year, month + 1, 0).getDate();
 
-    function generateCalendar(month, year) {
-      calendarGrid.innerHTML = "";
-      const firstDay = new Date(year, month, 1).getDay();
-      const daysInMonth = new Date(year, month + 1, 0).getDate();
-
-      for (let i = 0; i < firstDay; i++) {
-        const blankDay = document.createElement("div");
-        blankDay.classList.add("day");
-        calendarGrid.appendChild(blankDay);
-      }
-
-      for (let day = 1; day <= daysInMonth; day++) {
-        const dayElement = document.createElement("div");
-        dayElement.classList.add("day");
-        dayElement.textContent = day;
-
-        if (day === currentDate.getDate() && month === currentMonth && year === currentYear) {
-          dayElement.classList.add("today");
-        }
-
-        calendarGrid.appendChild(dayElement);
-      }
+    for (let i = 0; i < firstDay; i++) {
+      const blankDay = document.createElement("div");
+      blankDay.classList.add("day");
+      calendarGrid.appendChild(blankDay);
     }
 
-    generateCalendar(currentMonth, currentYear);
+    for (let day = 1; day <= daysInMonth; day++) {
+      const dayElement = document.createElement("div");
+      dayElement.classList.add("day");
+      dayElement.textContent = day;
 
-    const audio = document.getElementById('bgm');
-    const playBtn = document.getElementById('playBtn');
-
-    playBtn.textContent = audio.paused ? '►' : '❚❚';
-
-    playBtn.addEventListener('click', function () {
-      if (audio.paused) {
-        audio.play().then(() => {
-          playBtn.textContent = '❚❚';
-        }).catch(err => {
-          console.error("Playback failed:", err);
-        });
-      } else {
-        audio.pause();
-        playBtn.textContent = '►';
+      if (day === currentDate.getDate() && month === currentMonth && year === currentYear) {
+        dayElement.classList.add("today");
       }
-    });
 
-    audio.addEventListener('play', () => {
-      playBtn.textContent = '❚❚';
-    });
-    audio.addEventListener('pause', () => {
-      playBtn.textContent = '►';
-    });
+      calendarGrid.appendChild(dayElement);
+    }
+  }
 
-    const goalsList = document.getElementById('goals');
+  generateCalendar(currentMonth, currentYear);
 
-    goalsList.addEventListener('change', function (e) {
-      if (e.target.matches('input[type="checkbox"]')) {
-        const goalItem = e.target.closest('.goal-item');
-        const goalText = goalItem.querySelector('input[type="text"]');
-        if (e.target.checked) {
-          goalItem.classList.add('checked');
-          setTimeout(() => {
-            goalItem.classList.add('removing');
-          }, 5000); 
-          mark as removing
-        } else {
-          goalItem.classList.remove('checked');
-          goalItem.classList.remove('removing');
-        }
-      }
-    });
+  const audio = document.getElementById('bgm');
+  const playBtn = document.getElementById('playBtn');
 
-    const vibeImages = document.querySelectorAll('.vibe-item');
-    vibeImages.forEach(img => {
-      img.addEventListener('click', () => {
-        // Change the body's background to a tiled version of the selected image.
-        document.body.style.background = `url(${img.src}) repeat`;
-        // Ensure backgroundSize is set to auto so it tiles naturally.
-        document.body.style.backgroundSize = "auto";
+  playBtn.textContent = audio.paused ? '►' : '❚❚';
+
+  playBtn.addEventListener('click', function () {
+    if (audio.paused) {
+      audio.play().then(() => {
+        playBtn.textContent = '❚❚';
+      }).catch(err => {
+        console.error("Playback failed:", err);
       });
+    } else {
+      audio.pause();
+      playBtn.textContent = '►';
+    }
+  });
+
+  audio.addEventListener('play', () => {
+    playBtn.textContent = '❚❚';
+  });
+  audio.addEventListener('pause', () => {
+    playBtn.textContent = '►';
+  });
+
+  // Checklist (dynamic goals)
+  const goalsList = document.getElementById('goals');
+
+  function createGoalItem() {
+    const goalItem = document.createElement('div');
+    goalItem.className = 'goal-item';
+    goalItem.innerHTML = `
+      <input type="checkbox">
+      <input type="text" />
+    `;
+    const textInput = goalItem.querySelector('input[type="text"]');
+
+    textInput.addEventListener('input', () => {
+      const allInputs = goalsList.querySelectorAll('input[type="text"]');
+      const lastInput = allInputs[allInputs.length - 1];
+      if (textInput === lastInput && textInput.value.trim() !== '') {
+        createGoalItem();
+      }
     });
-  </script>
+
+    goalsList.appendChild(goalItem);
+  }
+
+  for (let i = 0; i < 10; i++) {
+    createGoalItem();
+  }
+
+  goalsList.addEventListener('change', function (e) {
+    if (e.target.matches('input[type="checkbox"]')) {
+      const goalItem = e.target.closest('.goal-item');
+      const goalText = goalItem.querySelector('input[type="text"]');
+      if (e.target.checked) {
+        goalItem.classList.add('checked');
+        goalText.style.textDecoration = 'line-through';
+        goalText.style.opacity = '0.5';
+        setTimeout(() => {
+          goalText.value = '';
+          goalItem.classList.remove('checked');
+          goalText.style.textDecoration = 'none';
+          goalText.style.opacity = '1';
+          e.target.checked = false;
+        }, 5000); // 45 seconds
+      } else {
+        goalText.style.textDecoration = 'none';
+        goalText.style.opacity = '1';
+      }
+    }
+  });
+
+  const vibeImages = document.querySelectorAll('.vibe-item');
+  vibeImages.forEach(img => {
+    img.addEventListener('click', () => {
+      document.body.style.background = `url(${img.src}) repeat center`;
+      document.body.style.backgroundSize = "auto";
+    });
+  });
+</script>
+
+
 </body>
 </html>
-
