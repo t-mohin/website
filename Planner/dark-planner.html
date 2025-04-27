@@ -18,6 +18,7 @@
       align-items: center;
       min-height: 100vh;
     }
+    
 
     .container {
       display: grid;
@@ -105,19 +106,21 @@
       transition: transform 0.3s ease;
       cursor: pointer;
     }
-    .goal-item {
-  display: flex;
-  align-items: center;
-  gap: 10px; 
-  margin-bottom: 10px;
-}
-.goal-item input[type="checkbox"] {
-  flex: 0 0 auto;
-}
-.goal-item input[type="text"] {
-  flex: 1; 
-}
 
+    .goal-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+
+    .goal-item input[type="checkbox"] {
+      flex: 0 0 auto;
+    }
+
+    .goal-item input[type="text"] {
+      flex: 1;
+    }
 
     @media (max-width: 768px) {
       .container {
@@ -171,8 +174,7 @@
     <div class="section">
       <h2>To Do List</h2>
       <div id="goals">
-        <!-- 10 Goal Items -->
-     ('<div class="goal-item"><input type="checkbox"> <input type="text" /></div>')
+        <!-- 8 Goal Items -->
       </div>
     </div>
   </div>
@@ -302,7 +304,7 @@
     goalsList.appendChild(goalItem);
   }
 
-  for (let i = 0; i < 10; i++) {
+  for (let i = 0; i < 10; i++) { // only 8 inputs now
     createGoalItem();
   }
 
@@ -320,7 +322,7 @@
           goalText.style.textDecoration = 'none';
           goalText.style.opacity = '1';
           e.target.checked = false;
-        }, 5000); // 45 seconds
+        }, 5000); // 5 seconds
       } else {
         goalText.style.textDecoration = 'none';
         goalText.style.opacity = '1';
@@ -336,7 +338,6 @@
     });
   });
 </script>
-
 
 </body>
 </html>
