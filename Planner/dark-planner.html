@@ -34,7 +34,7 @@
       border-radius: 15px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
       backdrop-filter: blur(10px);
-      margin-bottom: 5px; /* Adjusted bottom margin */
+      margin-bottom: 10px;
     }
 
     h2 {
@@ -121,6 +121,11 @@
       flex: 1;
     }
 
+    .goal-item.checked input[type="text"] {
+      text-decoration: line-through;
+      opacity: 0.6;
+    }
+
     @media (max-width: 768px) {
       .container {
         grid-template-columns: 1fr;
@@ -141,11 +146,6 @@
       cursor: pointer;
       z-index: 1000;
       outline: none;
-    }
-
-    .goal-item.checked input[type="text"] {
-      text-decoration: line-through;
-      opacity: 0.6;
     }
   </style>
 </head>
@@ -316,11 +316,9 @@
         goalText.style.textDecoration = 'line-through';
         goalText.style.opacity = '0.5';
         setTimeout(() => {
-          goalText.value = '';
-          goalItem.classList.remove('checked');
-          goalText.style.textDecoration = 'none';
-          goalText.style.opacity = '1';
-          e.target.checked = false;
+          goalItem.remove();
+          // Create a new goal to maintain the same number of rows
+          createGoalItem();
         }, 5000); // 5 seconds
       } else {
         goalText.style.textDecoration = 'none';
