@@ -187,7 +187,7 @@
 
     <div class="column">
       <div class="section">
-        <h2>Goals</h2>
+        <h2>To Do List</h2>
         <div id="goals">
           <div class="goal-item"><input type="checkbox"> <input type="text" /></div>
           <div class="goal-item"><input type="checkbox"> <input type="text" /></div>
@@ -316,10 +316,7 @@
           goalItem.classList.add('checked');
           setTimeout(() => {
             goalItem.classList.add('removing');
-            setTimeout(() => {
-              goalItem.remove();
-            }, 300);
-          }, 5000); // Remove after 45 seconds
+          }, 5000); // After 45 seconds, mark as removing
         } else {
           goalItem.classList.remove('checked');
           goalItem.classList.remove('removing');
